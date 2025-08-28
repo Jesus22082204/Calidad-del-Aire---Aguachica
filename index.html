@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mockup - Calidad del Aire Aguachica</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+  <!-- Header -->
+  <header class="flex justify-between items-center bg-white shadow px-6 py-3">
+    <div class="text-xl font-bold text-blue-700">Calidad del Aire - Aguachica</div>
+    <div class="flex items-center space-x-4">
+      <select class="border rounded px-2 py-1">
+        <option>Última semana</option>
+        <option>Último mes</option>
+        <option>Año actual</option>
+      </select>
+      <button class="bg-blue-600 text-white px-3 py-1 rounded">Exportar</button>
+      <img src="https://via.placeholder.com/32" alt="Perfil" class="rounded-full">
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="flex">
+    <!-- Sidebar -->
+    <aside class="w-1/5 bg-white shadow p-4 space-y-4">
+      <div>
+        <h2 class="font-semibold text-gray-700 mb-2">Filtros</h2>
+        <label class="block text-sm">Contaminante</label>
+        <select class="w-full border rounded px-2 py-1">
+          <option>PM2.5</option>
+          <option>PM10</option>
+          <option>NO₂</option>
+          <option>O₃</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-sm">Estación</label>
+        <select class="w-full border rounded px-2 py-1">
+          <option>Centro</option>
+          <option>Universidad</option>
+          <option>Zona Rural</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-sm">Capas del mapa</label>
+        <div class="space-y-1 text-sm">
+          <label class="flex items-center"><input type="checkbox" class="mr-2">Sensores</label>
+          <label class="flex items-center"><input type="checkbox" class="mr-2">Límites municipales</label>
+          <label class="flex items-center"><input type="checkbox" class="mr-2">Uso de suelo</label>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Dashboard -->
+    <main class="flex-1 p-6 space-y-6">
+      <!-- Map -->
+      <section class="bg-white rounded-2xl shadow p-4 h-80 flex items-center justify-center">
+        <span class="text-gray-500">[Mapa interactivo de estaciones con AQI] mapa interactivo principal del dashboard que te deja ver en qué puntos de la ciudad está peor o mejor la calidad del aire.</span>
+      </section>
+
+      <!-- Timeline and KPIs -->
+      <div class="grid grid-cols-3 gap-6">
+        <section class="col-span-2 bg-white rounded-2xl shadow p-4 h-64 flex items-center justify-center">
+          <span class="text-gray-500">[Serie temporal de contaminantes] Gráfico de líneas donde se ve la evolución de los contaminantes en el tiempo, mostrando picos de contaminación y tendencias generales.</span>
+        </section>
+        <section class="bg-white rounded-2xl shadow p-4 space-y-2">
+          <h3 class="font-semibold text-gray-700">Indicadores</h3>
+          <div class="grid grid-cols-2 gap-2 text-center">
+            <div class="bg-green-100 rounded p-2">
+              <p class="text-sm">PM2.5 Promedio</p>
+              <p class="font-bold text-lg">18 µg/m³</p>
+            </div>
+            <div class="bg-yellow-100 rounded p-2">
+              <p class="text-sm">PM10 Promedio</p>
+              <p class="font-bold text-lg">42 µg/m³</p>
+            </div>
+            <div class="bg-blue-100 rounded p-2">
+              <p class="text-sm">Temp. Media</p>
+              <p class="font-bold text-lg">29 °C</p>
+            </div>
+            <div class="bg-red-100 rounded p-2">
+              <p class="text-sm">Alertas</p>
+              <p class="font-bold text-lg">3</p>
+            </div>
+          </div>
+          <button class="w-full bg-blue-600 text-white px-3 py-1 rounded">Generar Interpretación</button>
+        </section>
+      </div>
+
+      <!-- Extra Graphs -->
+      <div class="grid grid-cols-2 gap-6">
+        <section class="bg-white rounded-2xl shadow p-4 h-60 flex items-center justify-center">
+          <span class="text-gray-500">[Heatmap horario] Mapa de calor que muestra en qué días y horas la contaminación es más alta o más baja, revelando patrones horarios.</span>
+        </section>
+        <section class="bg-white rounded-2xl shadow p-4 h-60 flex items-center justify-center">
+          <span class="text-gray-500">[Rosa de vientos] Gráfico circular que relaciona la dirección del viento con los niveles de contaminación, indicando de dónde provienen las emisiones.</span>
+        </section>
+        <section class="bg-white rounded-2xl shadow p-4 h-60 flex items-center justify-center">
+          <span class="text-gray-500">[Boxplots mensuales] Diagramas de caja que muestran la variación de la contaminación mes a mes, detectando temporadas más críticas.</span>
+        </section>
+        <section class="bg-white rounded-2xl shadow p-4 h-60 flex items-center justify-center">
+          <span class="text-gray-500">[Anomalías detectadas] Serie temporal donde se resaltan los puntos fuera de lo normal, ayudando a detectar eventos inusuales o fallas en sensores</span>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-200 text-gray-600 text-center py-2 text-sm">
+    Datos: IDEAM / Datos.gov.co / Corpocesar | Última actualización: 28 Ago 2025 12:00
+  </footer>
+</body>
+</html>
